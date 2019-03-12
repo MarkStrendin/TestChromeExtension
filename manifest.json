@@ -1,0 +1,30 @@
+{
+    "name": "Mark's test chrome extension",
+    "version": "1.0",
+    "description": "Just a test!",
+    "manifest_version": 2,    
+    "page_action": {
+    	"default_popup": "popup.html",
+    	"default_icon": {
+    		"16": "img/lssdlogo.png",
+    		"32": "img/lssdlogo.png",
+    		"48": "img/lssdlogo.png",
+    		"128": "img/lssdlogo.png"
+    	}
+    },
+    "icons": {
+    		"16": "img/lssdlogo.png",
+    		"32": "img/lssdlogo.png",
+    		"48": "img/lssdlogo.png",
+    		"128": "img/lssdlogo.png"    	
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://www.lskysd.ca/*"],
+          "js": ["lskysd.ca.js"]
+        }
+      ],
+ 	"permissions": [
+      "activeTab"
+    ]
+}
